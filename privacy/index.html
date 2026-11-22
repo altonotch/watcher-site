@@ -9,72 +9,98 @@
   <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-<main>
-  <header>
-    <img src="../icon.png" alt="">
+<div class="topbar">
+  <div class="wrap">
+    <a class="brand" href="../"><img src="../icon.png" alt="">Watcher</a>
+    <nav>
+      <a href="../">Support</a>
+      <a href="./" aria-current="page">Privacy</a>
+    </nav>
+  </div>
+</div>
+
+<section class="hero compact">
+  <div class="wrap">
     <div>
-      <h1>Watcher</h1>
-      <p>Time tracking for your Mac</p>
+      <h1>Privacy policy</h1>
+      <p class="updated">Last updated 22 November 2026</p>
     </div>
-  </header>
+  </div>
+</section>
 
-  <nav>
-    <a href="../">Support</a>
-    <a href="./" aria-current="page">Privacy</a>
-  </nav>
+<main class="wrap">
+  <div class="card summary">
+    <p><strong>Watcher doesn't collect any data about you.</strong> It has no accounts, analytics,
+    ads or tracking. Your timers stay on your Mac.</p>
+  </div>
 
-  <h2>Privacy policy</h2>
-  <p class="updated">Last updated 22 November 2026</p>
+  <div class="card">
+    <h3>What stays on your Mac</h3>
+    <ul>
+      <li>Your timers and their history are stored in Watcher's container on your Mac. They aren't
+      sent anywhere unless you turn on Toggl sync.</li>
+      <li>Settings, including a Toggl API token if you add one, are kept in Watcher's preferences on
+      your Mac.</li>
+    </ul>
+  </div>
 
-  <p><strong>Watcher doesn't collect any data about you.</strong> It has no accounts, analytics,
-  ads or tracking. Your timers stay on your Mac.</p>
+  <div class="card">
+    <h3>Toggl sync (optional)</h3>
+    <p>If you connect Toggl, Watcher talks only to Toggl's API, over HTTPS, using your API token or
+    key: <code>api.track.toggl.com</code> for Toggl Track, or <code>focus.toggl.com</code> for the
+    new Toggl. It sends each timer's name, start and stop times, duration, and the workspace and
+    project you picked. It also reads your Toggl profile, projects and recent time entries so the
+    two stay in step. Data held in Toggl falls under
+    <a href="https://toggl.com/legal/privacy/">Toggl's privacy policy</a>. Nothing goes to Toggl
+    unless you connect an account.</p>
+  </div>
 
-  <h3>What stays on your Mac</h3>
-  <ul>
-    <li>Your timers and their history are stored in Watcher's container on your Mac. They aren't
-    sent anywhere unless you turn on Toggl sync.</li>
-    <li>Settings, including a Toggl API token if you add one, are kept in Watcher's preferences on
-    your Mac.</li>
-  </ul>
+  <div class="card">
+    <h3>Purchases</h3>
+    <p>The trial and Watcher Pro are bought through the Mac App Store. Apple handles payment.
+    Watcher only learns whether you've started the trial or own Pro, never your payment
+    details.</p>
+  </div>
 
-  <h3>Toggl sync (optional)</h3>
-  <p>If you connect Toggl, Watcher talks only to Toggl's API, over HTTPS, using your API token or
-  key: <code>api.track.toggl.com</code> for Toggl Track, or <code>focus.toggl.com</code> for the
-  new Toggl. It sends each timer's
-  name, start and stop times, duration, and the workspace and project you picked. It also reads
-  your Toggl profile, projects and recent time entries so the two stay in step. Data held in
-  Toggl falls under <a href="https://toggl.com/legal/privacy/">Toggl's privacy policy</a>.
-  Nothing goes to Toggl unless you connect an account.</p>
+  <div class="card">
+    <h3>Command line and coding agents (optional)</h3>
+    <p>The <code>watcher</code> command and the <code>/watcher</code> skill run on your Mac. If
+    you let a coding agent such as Claude Code or Codex use them, the agent sees what the command
+    prints, such as timer names and times. That agent's own terms cover what it does with that
+    output.</p>
+  </div>
 
-  <h3>Purchases</h3>
-  <p>The trial and Watcher Pro are bought through the Mac App Store. Apple handles payment.
-  Watcher only learns whether you've started the trial or own Pro, never your payment
-  details.</p>
+  <div class="card">
+    <h3>Crash reports</h3>
+    <p>If you've chosen to share analytics with app developers in macOS settings, Apple may pass
+    on anonymous crash reports. Watcher sends nothing itself.</p>
+  </div>
 
-  <h3>Command line and coding agents (optional)</h3>
-  <p>The <code>watcher</code> command and the <code>/watcher</code> skill run on your Mac. If
-  you let a coding agent such as Claude Code or Codex use them, the agent sees what the command
-  prints, such as timer names and times. That agent's own terms cover what it does with that
-  output.</p>
+  <div class="card">
+    <h3>Feedback email (optional)</h3>
+    <p><kbd>Help → Send Feedback…</kbd> opens a draft in your own mail app, with your Watcher
+    version, macOS version and Pro status filled in. Nothing is sent unless you send it. If you
+    email <a href="mailto:watcher@altonotch.com">watcher@altonotch.com</a>, your email address and
+    message reach the developer, who uses them only to answer you.</p>
+  </div>
 
-  <h3>Crash reports</h3>
-  <p>If you've chosen to share analytics with app developers in macOS settings, Apple may pass
-  on anonymous crash reports. Watcher sends nothing itself.</p>
+  <div class="card">
+    <h3>Changes</h3>
+    <p>If this policy changes, this page and its date will be updated.</p>
+  </div>
 
-  <h3>Feedback email (optional)</h3>
-  <p>Help → Send Feedback… opens a draft in your own mail app, with your Watcher version, macOS
-  version and Pro status filled in. Nothing is sent unless you send it. If you email
-  <a href="mailto:watcher@altonotch.com">watcher@altonotch.com</a>, your email address and message
-  reach the developer, who uses them only to answer you.</p>
-
-  <h3>Changes</h3>
-  <p>If this policy changes, this page and its date will be updated.</p>
-
-  <h3>Contact</h3>
-  <p>Questions about privacy: email <a href="mailto:watcher@altonotch.com">watcher@altonotch.com</a>
-  or <a href="https://github.com/altonotch/watcher-site/issues">open an issue</a>.</p>
-
-  <footer>Watcher for macOS</footer>
+  <div class="card">
+    <h3>Contact</h3>
+    <p>Questions about privacy: email <a href="mailto:watcher@altonotch.com">watcher@altonotch.com</a>
+    or <a href="https://github.com/altonotch/watcher-site/issues">open an issue</a>.</p>
+  </div>
 </main>
+
+<footer>
+  <div class="wrap">
+    <span>Watcher for macOS</span>
+    <span><a href="../">Support</a></span>
+  </div>
+</footer>
 </body>
 </html>

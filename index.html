@@ -9,66 +9,104 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<main>
-  <header>
-    <img src="icon.png" alt="">
+<div class="topbar">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="icon.png" alt="">Watcher</a>
+    <nav>
+      <a href="./" aria-current="page">Support</a>
+      <a href="privacy/">Privacy</a>
+    </nav>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="wrap">
+    <img src="icon.png" alt="Watcher app icon">
     <div>
       <h1>Watcher</h1>
-      <p>Time tracking for your Mac</p>
+      <p class="tagline">Time tracking in your menu bar. Name a timer after the task you're on, start it with
+      a click, and see where your day went.</p>
+      <ul class="pills">
+        <li>Menu bar timers</li>
+        <li>Toggl sync</li>
+        <li>Terminal and coding agents</li>
+      </ul>
     </div>
-  </header>
+  </div>
+</section>
 
-  <nav>
-    <a href="./" aria-current="page">Support</a>
-    <a href="privacy/">Privacy</a>
-  </nav>
+<main class="wrap">
+  <div class="card">
+    <h2>Get help</h2>
+    <p>Found a bug or have a question? Choose <kbd>Help → Send Feedback…</kbd> in Watcher, or email
+    <a href="mailto:watcher@altonotch.com">watcher@altonotch.com</a>. Send Feedback fills in your
+    Watcher and macOS versions for you.</p>
+    <div class="actions">
+      <a class="button primary" href="mailto:watcher@altonotch.com">Email watcher@altonotch.com</a>
+      <a class="button secondary" href="https://github.com/altonotch/watcher-site/issues/new">Open a GitHub issue</a>
+    </div>
+    <p class="muted small">In an issue, say which macOS and Watcher versions you're on
+    (<kbd>Watcher → About Watcher</kbd>). Issues are public, so never paste your Toggl API token or
+    anything private into one.</p>
+  </div>
 
-  <h2>Get help</h2>
-  <p>Found a bug or have a question? Choose Help → Send Feedback… in Watcher, or email
-  <a href="mailto:watcher@altonotch.com">watcher@altonotch.com</a>. Send Feedback fills in your
-  Watcher and macOS versions for you.</p>
-  <p>You can also <a href="https://github.com/altonotch/watcher-site/issues/new">open an issue</a>.
-  Say which macOS and Watcher versions you're on (Watcher → About Watcher). Issues are public, so
-  never paste your Toggl API token or anything private into one.</p>
+  <h2 class="section-title">Common questions</h2>
 
-  <h2>Common questions</h2>
+  <div class="faq">
+    <div class="card">
+      <h3>What's free, and what does Pro add?</h3>
+      <p>Timers, the menu bar, the last 30 days of history and Toggl Sync Now are free, with as many
+      timers running at once as you like. Pro adds automatic Toggl sync, changing timers from
+      the command line and the <code>/watcher</code> skill, and history older than 30 days.</p>
+    </div>
 
-  <h3>What's free, and what does Pro add?</h3>
-  <p>Timers, the menu bar, the last 30 days of history and Toggl Sync Now are free, with as many
-  timers running at once as you like. Pro adds automatic Toggl sync, changing timers from
-  the command line and the <code>/watcher</code> skill, and history older than 30 days.</p>
+    <div class="card">
+      <h3>How does the trial work?</h3>
+      <p>Start the free 14-day trial from Watcher to try every Pro feature. When it ends, Pro
+      features lock until you buy Watcher Pro once. Your timers and history are kept either
+      way.</p>
+    </div>
 
-  <h3>How does the trial work?</h3>
-  <p>Start the free 14-day trial from Watcher to try every Pro feature. When it ends, Pro
-  features lock until you buy Watcher Pro once. Your timers and history are kept either
-  way.</p>
+    <div class="card">
+      <h3>I bought Pro on another Mac. How do I get it here?</h3>
+      <p>Sign in to the Mac App Store with the same Apple Account, then choose Restore Purchases in
+      Watcher.</p>
+    </div>
 
-  <h3>I bought Pro on another Mac. How do I get it here?</h3>
-  <p>Sign in to the Mac App Store with the same Apple Account, then choose Restore Purchases in
-  Watcher.</p>
+    <div class="card">
+      <h3>How do I connect Toggl?</h3>
+      <p>Open Watcher's settings, go to Toggl, and pick the one you use at the top:</p>
+      <ul>
+        <li><strong>Toggl</strong> (the new Toggl at focus.toggl.com): copy your API key from
+        <a href="https://focus.toggl.com/settings">Toggl settings</a>. Then open Toggl in your browser
+        and copy the address from the address bar, which tells Watcher your organization. Paste both
+        in Watcher and click Connect.</li>
+        <li><strong>Toggl Track</strong>: copy your API token from your
+        <a href="https://track.toggl.com/profile">Toggl Track profile</a>, paste it in Watcher and click
+        Connect.</li>
+      </ul>
+      <p>You can then pick a default project. Watcher syncs to one of the two at a time.</p>
+    </div>
 
-  <h3>How do I connect Toggl?</h3>
-  <p>Open Watcher's settings, go to Toggl, and pick the one you use at the top:</p>
-  <ul>
-    <li><strong>Toggl</strong> (the new Toggl at focus.toggl.com): copy your API key from
-    <a href="https://focus.toggl.com/settings">Toggl settings</a>. Then open Toggl in your browser
-    and copy the address from the address bar, which tells Watcher your organization. Paste both
-    in Watcher and click Connect.</li>
-    <li><strong>Toggl Track</strong>: copy your API token from your
-    <a href="https://track.toggl.com/profile">Toggl Track profile</a>, paste it in Watcher and click
-    Connect.</li>
-  </ul>
-  <p>You can then pick a default project. Watcher syncs to one of the two at a time.</p>
+    <div class="card">
+      <h3>How do I use Watcher from Terminal or a coding agent?</h3>
+      <p>Open Watcher's settings, go to Command Line, and install the <code>watcher</code> command
+      and the skill for Claude Code or Codex. Run <code>watcher help</code> to see the commands.</p>
+    </div>
 
-  <h3>How do I use Watcher from Terminal or a coding agent?</h3>
-  <p>Open Watcher's settings, go to Command Line, and install the <code>watcher</code> command
-  and the skill for Claude Code or Codex. Run <code>watcher help</code> to see the commands.</p>
-
-  <h3>Where is my data?</h3>
-  <p>On your Mac only. See the <a href="privacy/">privacy policy</a> for what Toggl sync
-  sends.</p>
-
-  <footer>Watcher for macOS</footer>
+    <div class="card">
+      <h3>Where is my data?</h3>
+      <p>On your Mac only. See the <a href="privacy/">privacy policy</a> for what Toggl sync
+      sends.</p>
+    </div>
+  </div>
 </main>
+
+<footer>
+  <div class="wrap">
+    <span>Watcher for macOS</span>
+    <span><a href="privacy/">Privacy policy</a></span>
+  </div>
+</footer>
 </body>
 </html>
